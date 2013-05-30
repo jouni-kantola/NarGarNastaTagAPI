@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 
 namespace NarGarNastaTag.API.Models
 {
@@ -24,6 +25,11 @@ namespace NarGarNastaTag.API.Models
         public string GetStationRoutesUrl(string fromStationId)
         {
             return string.Format("http://www{0}.trafikverket.se/Trafikinformation/WebPage/TrafficSituationCity.aspx?JF=14&station={1}&arrivals=0&nostat=1", _serverRandomizer.GetServerNumber(), fromStationId);
+        }
+
+        public string ApiKey
+        {
+            get { return ConfigurationManager.AppSettings["API_KEY"]; }
         }
     }
 }
