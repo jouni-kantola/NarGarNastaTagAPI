@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarGarNastaTag.API", "NarGarNastaTag.API\NarGarNastaTag.API.csproj", "{483622D7-77A6-484C-9B3A-4F8B48D4D72F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarGarNastaTag.API.Data", "NarGarNastaTag.API.Data\NarGarNastaTag.API.Data.csproj", "{BE0C2C6A-A7E2-4720-A005-092368A80480}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarGarNastaTag.API.Tests", "NarGarNastaTag.API.Tests\NarGarNastaTag.API.Tests.csproj", "{69E15B92-1202-4D46-B514-8FA4586B8D2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarGarNastaTag.API.Contract", "NarGarNastaTag.API.Contract\NarGarNastaTag.API.Contract.csproj", "{50EBD528-57CC-4A5E-9B10-E7ABAE9D0C25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{483622D7-77A6-484C-9B3A-4F8B48D4D72F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{483622D7-77A6-484C-9B3A-4F8B48D4D72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{483622D7-77A6-484C-9B3A-4F8B48D4D72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{483622D7-77A6-484C-9B3A-4F8B48D4D72F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE0C2C6A-A7E2-4720-A005-092368A80480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE0C2C6A-A7E2-4720-A005-092368A80480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE0C2C6A-A7E2-4720-A005-092368A80480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE0C2C6A-A7E2-4720-A005-092368A80480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E15B92-1202-4D46-B514-8FA4586B8D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E15B92-1202-4D46-B514-8FA4586B8D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E15B92-1202-4D46-B514-8FA4586B8D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E15B92-1202-4D46-B514-8FA4586B8D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50EBD528-57CC-4A5E-9B10-E7ABAE9D0C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50EBD528-57CC-4A5E-9B10-E7ABAE9D0C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50EBD528-57CC-4A5E-9B10-E7ABAE9D0C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50EBD528-57CC-4A5E-9B10-E7ABAE9D0C25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
