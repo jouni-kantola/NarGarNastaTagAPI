@@ -31,5 +31,10 @@ namespace NarGarNastaTag.API.Models
         {
             get { return ConfigurationManager.AppSettings["API_KEY"]; }
         }
+        
+        public string AllowCallsFromOriginatedFrom
+        {
+            get { return ConfigurationManager.AppSettings["ALLOW_ORIGIN"]; }
+        }
     }
 }

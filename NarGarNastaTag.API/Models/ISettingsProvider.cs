@@ -8,5 +8,6 @@ namespace NarGarNastaTag.API.Models
         string GetRouteUrl(DateTime date, int trainNo);
         string GetStationRoutesUrl(string fromStationId);
         string ApiKey { get; }
+        string AllowCallsFromOriginatedFrom { get; }
     }
 }

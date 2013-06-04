@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using Nancy;
 using NarGarNastaTag.API.Contract;
+using NarGarNastaTag.API.Extensions;
 using NarGarNastaTag.API.Models;
 
 namespace NarGarNastaTag.API.Modules
@@ -14,6 +15,7 @@ namespace NarGarNastaTag.API.Modules
         public RouteQueryModule(ISettingsProvider settingsProvider) : base("/query")
         {
             _settingsProvider = settingsProvider;
+            this.EnableCors(_settingsProvider.AllowCallsFromOriginatedFrom);
             Get["/stations"] =
                 parameters =>
                     {

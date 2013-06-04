@@ -11,5 +11,10 @@ namespace NarGarNastaTag.API.Extensions
                                  @"bot|crawler|baiduspider|80legs|ia_archiver|voyager|curl|wget|yahoo! slurp|mediapartners-google",
                                  RegexOptions.IgnoreCase);
         }
+
+        public static void EnableCors(this NancyModule module, string origin)
+        {
+            module.After.AddItemToEndOfPipeline(x => x.Response.WithHeader("Access-Control-Allow-Origin", origin));
+        }
     }
 }
