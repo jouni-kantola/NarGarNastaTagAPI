@@ -36,5 +36,10 @@ namespace NarGarNastaTag.API.Models
         {
             get { return ConfigurationManager.AppSettings["ALLOW_ORIGIN"]; }
         }
+        
+        public string SimpleContactInformation
+        {
+            get { return ConfigurationManager.AppSettings["SIMPLE_CONTACT_INFORMATION"]; }
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace NarGarNastaTag.API.Models
         string GetStationRoutesUrl(string fromStationId);
         string ApiKey { get; }
         string AllowCallsFromOriginatedFrom { get; }
+        string SimpleContactInformation { get; }
     }
 }
