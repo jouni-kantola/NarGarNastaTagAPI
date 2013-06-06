@@ -1,5 +1,7 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using Nancy;
+using System.Linq;
 
 namespace NarGarNastaTag.API.Extensions
 {
@@ -12,9 +14,10 @@ namespace NarGarNastaTag.API.Extensions
                                  RegexOptions.IgnoreCase);
         }
 
-        public static void EnableCors(this NancyModule module, string origin)
+        public static void EnableCors(this NancyModule module)
         {
-            module.After.AddItemToEndOfPipeline(x => x.Response.WithHeader("Access-Control-Allow-Origin", origin));
+            module.After.AddItemToEndOfPipeline(x => x.Response.WithHeader("Access-Control-Allow-Origin", "*"));
+
         }
     }
 }

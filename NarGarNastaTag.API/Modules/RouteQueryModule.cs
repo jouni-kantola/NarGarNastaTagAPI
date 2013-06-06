@@ -15,7 +15,8 @@ namespace NarGarNastaTag.API.Modules
         public RouteQueryModule(ISettingsProvider settingsProvider) : base("/query")
         {
             _settingsProvider = settingsProvider;
-            this.EnableCors(_settingsProvider.AllowCallsFromOriginatedFrom);
+            this.EnableCors();
+
             Get["/stations"] =
                 parameters =>
                     {
