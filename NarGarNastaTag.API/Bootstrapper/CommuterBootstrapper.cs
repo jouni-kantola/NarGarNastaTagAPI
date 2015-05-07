@@ -3,6 +3,7 @@ using System.Reflection;
 using Nancy;
 using Nancy.Bootstrapper;
 using Nancy.Conventions;
+using Nancy.TinyIoc;
 using NarGarNastaTag.API.Contract;
 
 namespace NarGarNastaTag.API.Bootstrapper
@@ -20,12 +21,9 @@ namespace NarGarNastaTag.API.Bootstrapper
             _rootPathProvider = rootPathProvider;
         }
 
-        protected override void ConfigureRequestContainer(Nancy.TinyIoc.TinyIoCContainer container, NancyContext context)
+        protected override void ConfigureRequestContainer(TinyIoCContainer container, NancyContext context)
         {
-            container.AutoRegister(new List<Assembly>
-                {
-                    typeof (ITrainRoute).Assembly
-                }, false);
+            container.AutoRegister(new List<Assembly>{ typeof (ITrainRoute).Assembly });
             base.ConfigureRequestContainer(container, context);
         }
 
@@ -41,7 +39,7 @@ namespace NarGarNastaTag.API.Bootstrapper
             }
         }
 
-        internal new Nancy.TinyIoc.TinyIoCContainer GetApplicationContainer()
+        internal new TinyIoCContainer GetApplicationContainer()
         {
             return base.GetApplicationContainer();
         }
