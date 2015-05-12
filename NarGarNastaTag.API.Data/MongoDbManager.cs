@@ -1,10 +1,11 @@
-﻿using MongoDB.Driver;
+﻿using System.Linq;
+using MongoDB.Driver;
 
 namespace NarGarNastaTag.API.Data
 {
     public class MongoDbManager<T>
     {
-        private readonly MongoCollection<T> _collection;
+        private readonly IMongoCollection<T> _collection;
  
         public static MongoDbManager<T> MongoDb(string collectionName)
         {
@@ -22,19 +23,19 @@ namespace NarGarNastaTag.API.Data
         {
             var url = new MongoUrl(settings.MongoDb);
             var client = new MongoClient(url);
-            var server = client.GetServer();
-            var database = server.GetDatabase(url.DatabaseName);
+            var database = client.GetDatabase(url.DatabaseName);
             _collection = database.GetCollection<T>(collectionName);
         }
 
         public void Save(T document)
         {
-            _collection.Save(document);
+            _collection.InsertOneAsync(document);
         }
 
         public T Find(string id)
         {
-            return _collection.FindOneByIdAs<T>(id);
+            var filter = Builders<T>.Filter.Eq("_Id", id);
+            return _collection.Find(filter).ToListAsync().Result.FirstOrDefault();
         }
     }
 }
